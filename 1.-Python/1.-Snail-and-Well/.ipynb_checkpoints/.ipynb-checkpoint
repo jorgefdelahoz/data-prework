@@ -4,7 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<img src=\"https://bit.ly/2VnXWr2\" width=\"100\" align=\"left\">"
+    "## <img src=\"https://bit.ly/2VnXWr2\" width=\"100\" align=\"left\">"
    ]
   },
   {
@@ -30,7 +30,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -49,7 +49,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 14,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -65,35 +65,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Day 1: 10 cm\n",
-      "Day 2: 20 cm\n",
-      "Day 3: 30 cm\n",
-      "Day 4: 40 cm\n",
-      "Day 5: 50 cm\n",
-      "Day 6: 60 cm\n",
-      "Day 7: 70 cm\n",
-      "Day 8: 80 cm\n",
-      "Day 9: 90 cm\n",
-      "Day 10: 100 cm\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "while snail_position < well_height:\n",
-    "\tsnail_position = snail_position + daily_distance\n",
-    "\tif snail_position < well_height:\n",
-    "\t\tsnail_position = snail_position - nightly_distance\n",
-    "\t\tprint(f\"Day {day}: {snail_position} cm\")\n",
-    "\telse: \n",
-    "\t\tbreak\n",
-    "\tday = day + 1"
+    "\t\tsnail_position = snail_position + daily_distance\n",
+    "\t\tif snail_position < well_height:\n",
+    "\t\t\tsnail_position = snail_position - nightly_distance\n",
+    "\t\t\tprint(f\"Day {day}: {snail_position} cm\")\n",
+    "\t\telse: \n",
+    "\t\t\tprint(f\"The Snail has escaped in {day} days, rising {snail_position} cm\")\n",
+    "\t\tday = day + 1"
    ]
   },
   {
@@ -105,17 +88,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The Snail has escaped in 11 days, rising 130 cm\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "print(f\"The Snail has escaped in {day} days, rising {snail_position} cm\")"
    ]
@@ -139,39 +114,15 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Day 1: 10 cm\n",
-      "Day 2: 11 cm\n",
-      "Day 3: 24 cm\n",
-      "Day 4: 81 cm\n",
-      "Day 5: 105 cm\n",
-      "The Snail has escaped in 6 days, rising 150 cm\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "well_height = 125\n",
     "advance_cm = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55] \n",
     "nightly_distance = 20\n",
     "snail_position = 0\n",
-    "day = int(1)\t\n",
-    "\n",
-    "while snail_position < well_height:\n",
-    "\tfor i in advance_cm:\n",
-    "\t\tsnail_position += i\n",
-    "\t\tif snail_position <= well_height:\n",
-    "\t\t\tsnail_position = snail_position - nightly_distance\n",
-    "\t\t\tprint(f\"Day {day}: {snail_position} cm\")\n",
-    "\t\telse:\n",
-    "\t\t\tbreak\n",
-    "\t\tday = day + 1\n",
-    "print(f\"The Snail has escaped in {day} days, rising {snail_position} cm\")\n"
+    "day = 1"
    ]
   },
   {
@@ -184,20 +135,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "\n",
-      "Maximum displacement: 77 cm\n",
-      "Minimum displacement: 12 cm\n",
-      "Total displacement: 270 cm\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "print(f\"\\nMaximum displacement: {max(advance_cm)} cm\\nMinimum displacement: {min(advance_cm)} cm\\nTotal displacement: {snail_position + (day * 20)} cm\")"
    ]
@@ -211,17 +151,9 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Average progress: 25.0\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "print(f\"Average progress: {snail_position/day}\")"
    ]
@@ -231,32 +163,6 @@
    "metadata": {},
    "source": [
     "#### 4. What is the standard deviation of its displacement? Take into account the snail slides at night."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "17.16\n"
-     ]
-    }
-   ],
-   "source": [
-    "mean = sum(advance_cm)/len(advance_cm)\n",
-    "l = []\n",
-    "for i in advance_cm:\n",
-    "\tx = (i - mean)**2\n",
-    "\tl.append(x)\n",
-    "\n",
-    "variation = sum(l)/len(l)\n",
-    "\n",
-    "standard_deviation = round((variation**0.5),2) \n",
-    "print(standard_deviation)\n"
    ]
   },
   {
